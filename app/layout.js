@@ -22,7 +22,17 @@ export const metadata = {
   },
   description: 'Desarrollador Full Stack especializado en React, Next.js y Node.js. Portfolio de proyectos y experiencia técnica.',
   keywords: ['desarrollador', 'React', 'Next.js', 'Full Stack', 'portfolio', 'JavaScript'],
-  authors: [{ name: 'Gabriel Lema' }],
+  authors: [{ name: 'Gustavo Leon' }],
+  // Verificación de Google CORREGIDA
+  verification: {
+    google: 'xIj9x4L-C7LxU0Lm-a3r3nuVTdSjA--FoZ3LbFrWsXk',
+    // También puedes añadir otras verificaciones:
+    // yandex: 'tu-codigo-yandex',
+    // yahoo: 'tu-codigo-yahoo',
+    // other: {
+    //   me: ['tu-email@dominio.com']
+    // }
+  },
   openGraph: {
     type: 'website',
     locale: 'es_ES',
@@ -57,6 +67,7 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
+  
 }
 
 export default function RootLayout({ children }) {
