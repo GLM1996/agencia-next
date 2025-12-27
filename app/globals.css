@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+/* app/globals.css */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Mejor aún, específico para html */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Opcional: Padding para fixed navbar */
+html {
+  scroll-behavior: smooth;
+  /* scroll-padding-top: 80px; */
+  /* Ajusta según altura de tu navbar */
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
