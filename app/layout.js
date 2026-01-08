@@ -16,6 +16,11 @@ const geistMono = Geist_Mono({
 
 
 export const metadata = {
+  metadataBase: new URL('https://developer-gl.vercel.app'),
+  alternates: {
+    canonical: '/',
+  },
+
   title: {
     default: 'GLDev - Desarrollador Full Stack',
     template: '%s | GLDev'
@@ -23,20 +28,15 @@ export const metadata = {
   description: 'Desarrollador Full Stack especializado en React, Next.js y Node.js. Portfolio de proyectos y experiencia técnica.',
   keywords: ['desarrollador', 'React', 'Next.js', 'Full Stack', 'portfolio', 'JavaScript'],
   authors: [{ name: 'Gustavo Leon' }],
-  // Verificación de Google CORREGIDA
+
   verification: {
     google: 'xIj9x4L-C7LxU0Lm-a3r3nuVTdSjA--FoZ3LbFrWsXk',
-    // También puedes añadir otras verificaciones:
-    // yandex: 'tu-codigo-yandex',
-    // yahoo: 'tu-codigo-yahoo',
-    // other: {
-    //   me: ['tu-email@dominio.com']
-    // }
   },
+
   openGraph: {
     type: 'website',
     locale: 'es_ES',
-    url: 'https://gldev.vercel.app',
+    url: 'https://developer-gl.vercel.app/',
     title: 'GLDev - Desarrollador Full Stack',
     description: 'Portfolio profesional de desarrollo web',
     siteName: 'GLDev Portfolio',
@@ -49,6 +49,7 @@ export const metadata = {
       },
     ],
   },
+
   twitter: {
     card: 'summary_large_image',
     title: 'GLDev - Desarrollador Full Stack',
@@ -56,6 +57,7 @@ export const metadata = {
     images: ['/og-image.png'],
     creator: '@tuusuario',
   },
+
   robots: {
     index: true,
     follow: true,
@@ -67,8 +69,8 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
-  
-}
+};
+
 
 export default function RootLayout({ children }) {
   return (
