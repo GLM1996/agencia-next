@@ -64,9 +64,31 @@ export default function Hero() {
       />
 
       <div className="text-center px-6 z-10">
-        {/* Título con animación y texto que cambia */}
         <motion.h1
-          className="text-4xl md:text-5xl font-bold leading-tight"
+          className="text-3xl md:text-4xl font-bold leading-tight mb-4"
+          initial={{ y: -30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <span className="bg-gradient-to-r from-blue-600 via-white to-blue-200 bg-clip-text text-transparent">
+            Desarrollador
+          </span>{" "}
+          Full Stack React y Next.js
+        </motion.h1>
+
+        <motion.p
+          className="text-base md:text-lg text-gray-400 max-w-xl mb-6"
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          Construyo sitios web rápidos y optimizados para SEO, desarrollo aplicaciones modernas y automatizo procesos usando Node.js, APIs y herramientas cloud.
+        </motion.p>
+
+
+        {/* Título con animación y texto que cambia */}
+        <motion.h2
+          className="text-xl md:text-2xl font-bold leading-tight"
           initial={{ y: -30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -83,7 +105,7 @@ export default function Hero() {
               delaySpeed={1500}
             />
           </span>
-        </motion.h1>
+        </motion.h2>
 
         {/* Subtítulo */}
         <motion.p
