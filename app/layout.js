@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 
 
 export const metadata = {
-  metadataBase: new URL('https://developer-gl.vercel.app'),
+  metadataBase: new URL('https://agencia-gl.vercel.app'),
   alternates: {
-    canonical: '/',
+    canonical: 'https://agencia-gl.vercel.app/',
   },
 
   title: {
@@ -36,7 +36,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'es_ES',
-    url: 'https://developer-gl.vercel.app/',
+    url: 'https://agencia-gl.vercel.app/',
     title: 'GLDev - Desarrollador Full Stack',
     description: 'Portfolio profesional de desarrollo web',
     siteName: 'GLDev Portfolio',
@@ -71,13 +71,34 @@ export const metadata = {
   },
 };
 
+export function JsonLd() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Gustavo Leon",
+    url: "https://agencia-gl.vercel.app",
+    jobTitle: "Desarrollador Full Stack",
+    description:
+      "Desarrollador Full Stack especializado en React, Next.js y Node.js.",
+    sameAs: [
+      "https://github.com/GLM1996",
+      //"https://www.linkedin.com/in/tuusuario"
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="es">
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <JsonLd />
         <Navbar />
         {children}
         <Footer />
